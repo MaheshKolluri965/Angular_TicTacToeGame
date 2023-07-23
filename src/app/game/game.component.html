@@ -1,0 +1,12 @@
+<div class="outer-cont">
+    <h2 *ngIf="freshPage">Let's play Tic-Tac-Toe</h2>
+    <button (click)="newGame()" *ngIf="!winner && !freshPage && !isDraw">Reset</button>
+    <h2 *ngIf="winner">Player {{winner}} won!</h2>
+    <h2 *ngIf="isDraw">Draw!!!</h2>
+    <button (click)="newGame()" *ngIf="freshPage || winner || isDraw" >Start New Game</button>
+    <h1 *ngIf="!winner && !freshPage && !isDraw"> Current Player: {{player}}</h1>
+    <main *ngIf="!winner && !isDraw">
+        <app-board *ngFor="let val of squares; let i = index" [value]="val" 
+        (click)="makeMove(i)"></app-board>
+    </main>
+</div>

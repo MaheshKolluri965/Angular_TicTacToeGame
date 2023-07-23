@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  @Input() value: 'X' | 'O' | any;
+  @Input() value: 'X' | 'O' | undefined;
 
   constructor() { }
 

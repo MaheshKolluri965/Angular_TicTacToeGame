@@ -34,12 +34,16 @@ export class GameComponent implements OnInit {
   makeMove(idx: number){
     if(!this.squares[idx]){
       this.squares.splice(idx, 1, this.player);
-      
       console.log(this.player);
       this.xIsNext = !this.xIsNext;
       this.counter++;
     }
     this.winner = this.calculateWinner();
+    if(this.winner == 'X'){
+      this.winner = "1"
+    }if(this.winner == 'O'){
+      this.winner = "2"
+    }
 
     if(!this.winner && this.counter == 9){
       this.isDraw = 'yes';

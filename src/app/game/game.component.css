@@ -6,23 +6,38 @@
 .outer-cont {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom left, #00ffcc 0%, #cc99ff 100%);
+    background: linear-gradient(to bottom left, hsl(168, 100%, 50%) 0%, #cc99ff 100%);
     align-items: center;
     justify-content: center;
-    height: 800px;
+    height: 600px;
 }
 
 main{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 100px 100px 100px;
     grid-gap: 0px;
     grid-area: 100%;
 }
 
-app-board{
-    border: 1px rgb(57, 57, 57) solid;
-    height: 200px;
-}
+
+/* Add this CSS to style the app-board component */
+app-board {
+    border: 1.5px rgb(57, 57, 57) solid;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #ccc; 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  app-board:hover {
+    background-color: #f0f0f0;
+    /* Additional styles you may want to apply on hover */
+    /* For example, change the text color or add a box-shadow effect */
+    box-shadow: 0 0 8px black;
+  }
+  
 
 h1{
     text-align: center;
@@ -35,7 +50,7 @@ h1{
 }
 
 button{
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 10px;
     border: none;
